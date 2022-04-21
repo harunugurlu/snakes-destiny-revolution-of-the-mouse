@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap%27');
+
+#labelTitle {
+	
+	-fx-font-size: 50;
+	-fx-font-family: 'VT323', monospace;
+}
