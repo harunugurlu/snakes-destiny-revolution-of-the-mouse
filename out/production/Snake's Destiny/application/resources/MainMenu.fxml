@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane fx:id="myAnchorPane" maxHeight="1.7976931348623157E308" maxWidth="1000.0" minHeight="800.0" minWidth="1200.0" prefHeight="660.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MenuController">
+   <children>
+      <Button fx:id="buttonStart" alignment="CENTER" layoutX="511.0" layoutY="343.0" mnemonicParsing="false" onAction="#switchToGameModeMenu" prefHeight="57.0" prefWidth="179.0" text="START" textAlignment="CENTER" />
+      <Button fx:id="buttonExit" alignment="CENTER" layoutX="530.0" layoutY="413.0" mnemonicParsing="false" onAction="#logout" prefHeight="44.0" prefWidth="140.0" text="EXIT" textAlignment="CENTER" />
+      <BorderPane layoutX="1.0" layoutY="124.0" prefHeight="170.0" prefWidth="1200.0">
+         <center>
+            <ImageView fx:id="snakeTitleImage" fitHeight="57.0" fitWidth="464.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@Screen%20Shot%202022-04-20%20at%2000.44.28.png" />
+               </image>
+            </ImageView>
+         </center>
+         <bottom>
+            <ImageView fx:id="mouseTitleImage" fitHeight="17.0" fitWidth="336.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BASELINE_CENTER">
+               <image>
+                  <Image url="@Screen%20Shot%202022-04-20%20at%2000.45.39.png" />
+               </image>
+            </ImageView>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
