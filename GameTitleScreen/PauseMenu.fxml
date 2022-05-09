@@ -24,7 +24,6 @@
             <ColorAdjust saturation="-1.0" />
          </effect>
       </ImageView>
-      <Button layoutX="673.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchToMainMenu" opacity="0.0" prefHeight="156.0" prefWidth="150.0" />
       <ImageView fitHeight="300.0" fitWidth="300.0" layoutX="600.0" layoutY="178.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@resources/mainmenu.png" />
@@ -33,5 +32,8 @@
             <ColorAdjust saturation="-1.0" />
          </effect>
       </ImageView>
+      <Button layoutX="673.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchToMainMenu" opacity="0.0" prefHeight="156.0" prefWidth="150.0" />
+      <Button layoutX="529.0" layoutY="483.0" mnemonicParsing="false" onAction="#switchToGameZone" opacity="0.0" prefHeight="140.0" prefWidth="150.0" />
+      <Button layoutX="377.0" layoutY="247.0" mnemonicParsing="false" onAction="#switchToGameZone" opacity="0.0" prefHeight="156.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
