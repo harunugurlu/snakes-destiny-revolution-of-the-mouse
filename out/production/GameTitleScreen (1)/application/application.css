@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap%27');
+
+.root {
+
+    -fx-background-color: #000000;
+}
+
+
+.button {
+    -fx-font-family: 'VT323', monospace;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-background-color: #000000;
+    -font-weight-: black;
+    -fx-font-size: 30;
+    -fx-text-fill: #fafafa;
+
+}
+
+.button:hover {
+    -fx-font-family: 'VT323', monospace;
+    -fx-background-color: #000000;
+    -fx-font-weight: black;
+    -fx-font-size: 30;
+    -fx-text-fill: #757575;
+
+
+}
+
+
+
+
+
+
