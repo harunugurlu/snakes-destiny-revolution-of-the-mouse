@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Rectangle fx:id="head" arcHeight="5.0" arcWidth="5.0" fill="#1fff86" height="50.0" layoutX="275.0" layoutY="275.0" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="body1" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="275.0" layoutY="325.0" onKeyPressed="#eat" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="body2" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="275.0" layoutY="375.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Rectangle fx:id="body3" arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="50.0" layoutX="275.0" layoutY="425.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" width="50.0" />
+      <Line endX="508.0" layoutX="101.0" layoutY="325.0" startX="-100.0" />
+      <Line endX="-89.5" endY="518.0" layoutX="364.0" layoutY="83.0" startX="-89.5" startY="-82.0" />
+      <Line endX="-100.0" endY="-62.5" layoutX="164.0" layoutY="550.0" startX="-100.0" />
+      <Line endX="-87.5" endY="12.5" layoutX="166.0" layoutY="487.0" startX="-100.0" />
+      <Line endX="-111.5" endY="12.5" layoutX="165.0" layoutY="486.0" startX="-100.0" />
+      <Line endX="100.0" layoutX="350.0" layoutY="63.0" startX="185.5" />
+      <Line endX="100.0" layoutX="349.0" layoutY="64.0" startX="112.5" startY="14.5" />
+      <Line endX="100.0" layoutX="351.0" layoutY="61.0" startX="111.5" startY="-13.5" />
+      <Text layoutX="509.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="X --" />
+      <Text layoutX="79.0" layoutY="555.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Y--" />
+   </children>
+</AnchorPane>
