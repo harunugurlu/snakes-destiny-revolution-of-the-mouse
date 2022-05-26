@@ -1,29 +1,52 @@
 package application;
-	
+
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.stage.Stage;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.AnchorPane;
+import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
-	@Override
-	public void start(Stage primaryStage) {
-		try {
-			Parent root = FXMLLoader.load(getClass().getResource("/fxml/Sample.fxml"));
-			Scene scene = new Scene(root,400,400);
-			String css = this.getClass().getResource("/style/style.css").toExternalForm();
-			scene.getStylesheets().add(css);
-			primaryStage.setScene(scene);
-			primaryStage.show();
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
-	}
-	
-	public static void main(String[] args) {
-		launch(args);
-	}
+    @Override
+    public void start(Stage primaryStage) {
+        try {
+            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+            Scene scene = new Scene(root);
+            scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+            primaryStage.setScene(scene);
+            primaryStage.centerOnScreen();
+            primaryStage.setHeight(720);
+            primaryStage.setWidth(1200);
+            primaryStage.setTitle("Snake's Destiny: Revolution of The Mouse");
+            primaryStage.show();
+            primaryStage.setResizable(false);
+            primaryStage.setFullScreen(false);
+            primaryStage.setOnCloseRequest(event -> {
+                event.consume();
+                logout(primaryStage);
+            });
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void logout(Stage stage) {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setHeaderText("Do you really want to log out");
+        alert.setTitle("Logging out");
+        alert.setContentText("Please click yes if you want to log out.");
+
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            System.out.println("Logged out");
+            stage.close();
+        }
+    }
+
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
