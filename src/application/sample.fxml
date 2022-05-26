@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#moveSquareKeyPressed" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#moveSquareKeyPressed" prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #FFFFFF;" stylesheets="@application.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SinglePlayerController">
    <children>
       <ImageView fx:id="imageView" fitHeight="50.0" fitWidth="50.0" layoutX="43.0" layoutY="724.0" pickOnBounds="true" preserveRatio="true" visible="false">
          <image>
