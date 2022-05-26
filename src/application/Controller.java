@@ -186,7 +186,7 @@ public class Controller implements Initializable {
     }
 
 
-    //Change direction with key pressed
+    //Key event handler
     @FXML
     void moveSquareKeyPressed(KeyEvent event) {
         if (event.getCode().equals(KeyCode.W) && direction != Direction.DOWN) {
@@ -260,7 +260,7 @@ public class Controller implements Initializable {
     //Snake head is moved in the direction specified
     public void gameOver() {
 
-        if (xSnake < 0.0 || xSnake >= 1000.0 || ySnake < 0.0 || ySnake >= 800.0) isGameOver = false;
+        if (xSnake < 0.0 || xSnake > 1000.0 || ySnake < 0.0 || ySnake > 800.0) isGameOver = false;
 
     }
 
@@ -269,43 +269,47 @@ public class Controller implements Initializable {
         if (direction.equals(Direction.RIGHT)) {
             xPos = xPos + snakeSize;
             xSnake += 50;
+            gameOver();
             snakeHead.setTranslateX(xPos);
             //snakeHead.setX(xPos);
         } else if (direction.equals(Direction.LEFT)) {
             xPos = xPos - snakeSize;
             xSnake -= 50;
+            gameOver();
             snakeHead.setTranslateX(xPos);
         } else if (direction.equals(Direction.UP)) {
             yPos = yPos - snakeSize;
             ySnake -= 50;
+            gameOver();
             snakeHead.setTranslateY(yPos);
         } else if (direction.equals(Direction.DOWN)) {
             yPos = yPos + snakeSize;
             ySnake += 50;
+            gameOver();
             snakeHead.setTranslateY(yPos);
         }
-        gameOver();
+        
 
     }
-    private void moveMouseKeys(Rectangle test) {
+    private void moveMouseKeys(Rectangle mouse) {
         if (directionMouse.equals(DirectionMouse.RIGHT)) {
-            xPosT = xPosT + snakeSize;
+            xPosT = xPosT + 50;
            System.out.println("mouse going right: " + xPosT);
            mouse.setFill(new ImagePattern(sag));
             mouse.setTranslateX(xPosT);
             //snakeHead.setX(xPos);
         } else if (directionMouse.equals(DirectionMouse.LEFT)) {
-            xPosT = xPosT - snakeSize;
+            xPosT = xPosT - 50;
             mouse.setFill(new ImagePattern(sol));
 
             mouse.setTranslateX(xPosT);
         } else if (directionMouse.equals(DirectionMouse.UP)) {
-            yPosT = yPosT - snakeSize;
+            yPosT = yPosT - 50;
             mouse.setFill(new ImagePattern(yukari));
 
             mouse.setTranslateY(yPosT);
         } else if (directionMouse.equals(DirectionMouse.DOWN)) {
-            yPosT = yPosT + snakeSize;
+            yPosT = yPosT + 50;
             mouse.setFill(new ImagePattern(asagi));
             mouse.setTranslateY(yPosT);
         }
@@ -494,6 +498,7 @@ public class Controller implements Initializable {
     public void restart() {
 
     }
+
 
 
 }
